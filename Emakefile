@@ -1,2 +1,3 @@
-{'src/statsd.erl', [debug_info, {outdir, 'ebin'}]}.
-{'src/statsd_app.erl', [debug_info, {outdir, 'ebin'}]}.
+{'../libs/ejabberd/src/gen_mod',
+	[{outdir, "../ebin"},{i,"../libs/ejabberd/src"}]}.
+{'src/*',     [{outdir, "ebin"},{i,"../libs/ejabberd/src"}]}.
