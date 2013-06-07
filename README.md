@@ -24,6 +24,7 @@ To compile, make sure that you have the ejabberd source files in the same parent
 ## Author
 
 Original author: Dominik Liebler <liebler.dominik@googlemail.com>
+
 Ejabberd adjustements by: Michael Weibel <michael@mila.com>
 
 ## License
