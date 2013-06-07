@@ -1,26 +1,17 @@
 # statsd-erlang
 
 an Erlang client for [statsd](https://github.com/etsy/statsd) that is based on OTP's gen_server behaviour.
+Adapted for ejabberd.
 
 ## Usage
 
-Add statsd-erlang to your application file like this:
+Add statsd-erlang to your modules configuration section in ejabberd.cfg like this:
 
 ```erlang
-{mod, {statsd_app, []}}
+{statsd, ['localhost', 8125]}
 ```
 
-You can specify the host and/or port in the configuration, too:
-
 ```erlang
-{mod, {statsd_app, ["localhost", 8125]}}
-```
-
-The values "localhost" and 8125 are set by default, so you only have to specify them if you want to use others.
-
-```erlang
-statsd:start("localhost", 8125).
-
 statsd:increment("foo.bar").
 statsd:count("foo.bar", 5).
 statsd:timing("foo.bar", 2500).
@@ -28,11 +19,12 @@ statsd:timing("foo.bar", 2500).
 
 ## Development
 
-To compile the source, run `erl -make` from the root directory. You can also use [rebar](https://github.com/basho/rebar/).
+To compile, make sure that you have the ejabberd source files in the same parent directory as statsd-erlang and run `./build.sh`.
 
 ## Author
 
 Original author: Dominik Liebler <liebler.dominik@googlemail.com>
+Ejabberd adjustements by: Michael Weibel <michael@mila.com>
 
 ## License
 
